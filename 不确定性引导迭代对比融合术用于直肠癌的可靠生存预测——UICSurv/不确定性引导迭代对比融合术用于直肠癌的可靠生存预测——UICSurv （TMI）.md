@@ -37,5 +37,8 @@ UICSurv 框架的运行机制由两个高度协同的阶段组成：
 * **可靠的不确定性估计**：实验证实，EvidenceHit 模块输出的不确定性与 IBS 预测误差呈强正相关（Spearman 相关系数达 0.83）。这意味着模型估算出的“高不确定性”确实对应了现实中预测误差较大的离群或复杂病例。
 
 * **极强的缺失模态鲁棒性**：在训练和测试阶段 DWI 缺失率高达 50% 的极端情况下，UICSurv 的性能下降幅度远小于基准模型 HEALNET，证明了其特征空间的稳健性。
-<img src="./images/feature_importance.png" alt="特征重要性热力图" style="zoom: 50%;" />
+  <img src="./images/feature_importance.png" alt="特征重要性热力图" style="zoom: 50%;" />
+
 * ⭐**临床可解释性验证**：特征重要性热力图显示，模型准确地将注意力集中在了直肠肿瘤病灶及邻近组织上 。此外，SHAP 分析指出，脉管浸润 (EMVI)、肠系膜筋膜状态 (MRF)、N 分期和 T 分期是对生存预测贡献最大的临床变量，这与现有的医学共识完全吻合。
+
+  原文连接：[Uncertainty-guided Iterative Contrastive Fusion for Reliable Survival Prediction in Rectal Cancer](https://ieeexplore.ieee.org/document/11371397/authors#authors)
